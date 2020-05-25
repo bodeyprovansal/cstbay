@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs", { username: username }) %>
+
+<div class="home-banner"></div>
+
+<div class="container text-center">
+    <h5>Welcome to</h5>
+    <h1 class="site-title" id="home-title">cstBay</h1>
+    <h5>The World's Best Shopping Site!</h5>
+</div>
+
+<div class="home-banner"></div>
+
+<% if (typeof loginError !="undefined" && loginError) { %>
+    <br />
+    <div class="container text-center">
+        <h4 class="error">We couldn't authenticate those credentials. Please try again.</h4>
+    </div>
+<% } %>
+
+
+<% include partials/footer.ejs %>

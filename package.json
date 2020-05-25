@@ -1,0 +1,33 @@
+{
+  "name": "cst336-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "faker": "^4.1.0",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0",
+    "require": "^2.4.20",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesk40/cst336-final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlesk40/cst336-final/issues"
+  },
+  "homepage": "https://github.com/charlesk40/cst336-final#readme"
+}

@@ -1,0 +1,69 @@
+<%- include("partials/header.ejs", { username: username }) %>
+
+    <div class="container page-header">
+        <h3>Administrator Dashboard</h3>
+    </div>
+    
+    <div class="container">
+    
+        <form action="/adminApi/reports">
+            <div class="text-center">
+                <button class="btn btn-outline-dark">Generate Reports</button>
+            </div>
+            <br>
+        </form>
+        
+        <% if (typeof reports !="undefined") { %>
+            <br />
+            <div class="container text-center">
+                <table align="center" border="1px solid black">
+                    <tr>
+                        <td>
+                            <p class="reports">Average price of items: $<%=reports[0]%></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="reports">Total number of users: <%=reports[1]%></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+        <% } %>
+        
+        <form action="/adminApi/deleteAllUsers">
+            <div class="text-center">
+                <button class="btn btn-outline-dark">Delete ALL Users</button>
+                <P>With great power, comes great responsibilty...</p>
+                <P>P.S. The admin account will not be deleted</p>
+            </div>
+        </form>
+
+        <h3>Delete a User</h3>
+        <form method="POST" action="/adminApi/deleteUser">
+            <div class="form-group">
+                <label for="usernameToDelete">Username:</label>
+                <input type="text" class="form-control password-validate" id="usernameToDelete" name="usernameToDelete">
+            </div>
+            <div class="text-right">
+                <button class="btn btn-outline-dark">Delete User</button>
+            </div>
+        </form>
+        
+        <% if (typeof status !="undefined") { %>
+            <br />
+            <div class="container text-center">
+                <p class="status"><%=status%></p>
+            </div>
+        <% } %>
+    
+        <br /><br />
+        <form action="/logout">
+            <div class="text-center">
+                <button type="submit" class="btn btn-outline-dark">Log out</button>
+            </div>
+        </form>
+    </div>
+
+<% include partials/footer.ejs %>

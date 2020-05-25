@@ -1,0 +1,44 @@
+<%- include("partials/header.ejs", { username: username }) %>
+
+    <div class="container page-header">
+        <h3>Welcome, <%=username%>!</h3>
+    </div>
+
+    <div class="container">
+        This is my account info... <br>
+        This page must be password-protected!
+        <br /><br />
+
+        <h3>Change Your Password</h3>
+        <p>COMING SOON!</p>
+        <div id="passwordChange">
+            <div class="form-group">
+                <label for="newPassword">Current Password:</label>
+                <input type="password" class="form-control" id="currentPassword" name="currentPassword">
+            </div>
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" class="form-control password-validate" id="newPassword" name="newPassword">
+            </div>
+            <div class="form-group">
+                <label for="newPasswordConfirm">Retype New Password:</label>
+                <input type="password" class="form-control password-validate" id="newPasswordConfirm" name="newPasswordConfirm">
+            </div>
+            <div class="text-right">
+                <span class="password-error"></span>
+            </div>
+            <br />
+            <div class="text-right">
+                <button class="btn btn-outline-dark" id="btnChangePassword">Change My Password</button>
+            </div>
+            
+            <br /><br />
+            <form action="/logout">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-dark">Log out</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<% include partials/footer.ejs %>
